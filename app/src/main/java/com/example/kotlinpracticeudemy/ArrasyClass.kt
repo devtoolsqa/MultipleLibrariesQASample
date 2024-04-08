@@ -1,20 +1,42 @@
 package com.example.kotlinpracticeudemy
 
 fun main() {
-    var simpleArr= arrayOf(1,2,3)
-    val nullArray: Array<Int?> = arrayOfNulls(3)
-    // Creates an Array<Int> that initializes with zeros [0, 0, 0]
-    val initArray = Array<Int>(3) { 0 }
-    val strArray =Array<String>(3) { "n = $it" }
-    val twoDArray = Array(2) { Array<Int>(2) { 0 } }
 
-    strArray.set(0,"sandeep")
-    strArray.set(1,"pradeep")
-    strArray.set(2,"kiyansh")
+    //Simple Array
+    val sampleArray = arrayOf(10, 20, 30, 40)
+    println(sampleArray.joinToString())
 
-    nullArray.set(0,1)
+    // create an array of null, null
+    val sampleNullArray = arrayOfNulls<Int?>(2)
+    println(sampleNullArray.joinToString())
 
-    initArray.set(0,10)
+// creates a simple array of 1s, where 3 is the size of the array
+    val simpleArray = Array<Int>(3) { 1 }
+    println(simpleArray.joinToString())
 
+    // creates the modified array of elements, where i is the index,
+// so everytime the i gets multiplied by 2, and size is 3
+    val advancedArray = Array<Int>(3) { i -> i * 2 }
+    println(advancedArray.joinToString())
+
+
+    val array = arrayOf(1, 2, 3)
+    for (item in array) {
+        println(item)
+    }
+
+   // Using the forEach operator:
+
+    val array1 = arrayOf(1, 2, 3)
+    array1.forEach { item ->
+        println(item)
+    }
+    val array2 = arrayOf(1, 2, 3)
+    val iterator = array2.iterator()
+
+    while (iterator.hasNext()) {
+        val item = iterator.next()
+        println(item)
+    }
 
 }

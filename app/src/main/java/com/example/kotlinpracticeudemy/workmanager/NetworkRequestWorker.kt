@@ -3,7 +3,6 @@ package com.example.kotlinpracticeudemy.workmanager
 import android.content.Context
 
 import android.util.Log
-import android.view.WindowInsetsAnimation
 
 import androidx.work.Worker
 import androidx.work.WorkerParameters
@@ -12,7 +11,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MyWorker (context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
+class NetworkWorker (context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
     override fun doWork(): Result {
         try {
             // Create your data model object

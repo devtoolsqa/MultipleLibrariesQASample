@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">KotlinPracticeUdemy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="congrts">Congratulations..!</string>
+    <string name="navigateToHome">Navigate To Home</string>
+    <string name="navigateToPrev">Navigate To Previous Page</string>
 </resources>

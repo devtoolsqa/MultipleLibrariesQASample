@@ -14,6 +14,8 @@ retrofit = "2.9.0"
 converterGson = "2.9.0"
 navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
+safeargsVersion="2.5.3"
+androidx-navigation = "2.7.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,4 +35,5 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidx-navigation" }
 

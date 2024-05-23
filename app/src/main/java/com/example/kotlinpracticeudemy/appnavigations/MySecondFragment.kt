@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.kotlinpracticeudemy.R
+import com.navigation.component.sample.data.MyParcelableDataArgs
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,6 +46,15 @@ class MySecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val safeArgs: MySecondFragmentArgs by navArgs()
+        val arg1 = safeArgs.arg1
+        val arg2 = safeArgs.arg2
+        val arg3 = safeArgs.arg3 as MyParcelableDataArgs
+        val data1=arg3.data1
+        val data2=arg3.data2
+        val data3=arg3.data3
+        val tvLabel=view.findViewById<TextView>(R.id.tv_label)
+        tvLabel.text=data3
         button=view.findViewById(R.id.button_next)
         button.setOnClickListener{
             findNavController().navigate(R.id.action_mySecondFragment_to_myThirdFragment)

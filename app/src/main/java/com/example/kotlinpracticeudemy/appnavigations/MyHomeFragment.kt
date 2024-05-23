@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.kotlinpracticeudemy.R
+import com.navigation.component.sample.data.MyParcelableDataArgs
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,7 +47,18 @@ class MyHomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         button=view.findViewById(R.id.button_start)
         button.setOnClickListener{
-            findNavController().navigate(R.id.action_myHomeFragment_to_mySecondFragment)
+            val arg1 = 2
+            val arg3 = "Screen 2"
+            val data1=1
+            val arg2= MyParcelableDataArgs(data1)
+            arg2.data2=2
+            arg2.data3="Welcome to Screen 2(wow)"
+            arg2.data4=1
+            val directions=MyHomeFragmentDirections.actionMyHomeFragmentToMySecondFragment(arg2,arg3,arg1)
+//val directions=MyHomeFragmentDirections.actionMyHomeFragmentToMySecondFragment(arg1,arg2,arg3)
+
+           findNavController().navigate(directions)
+
         }
     }
 

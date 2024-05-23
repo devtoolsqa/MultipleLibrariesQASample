@@ -1,7 +1,10 @@
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.androidx.navigation.safeargs)
 }
+
 
 android {
     namespace = "com.example.kotlinpracticeudemy"

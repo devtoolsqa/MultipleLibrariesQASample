@@ -1,4 +1,4 @@
-package com.example.kotlinpracticeudemy.appnavigations
+package com.example.kotlinpracticeudemy.startscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.core.net.toUri
 import androidx.navigation.fragment.findNavController
 import com.example.kotlinpracticeudemy.R
-import com.navigation.component.sample.data.MyParcelableDataArgs
+import com.example.kotlinpracticeudemy.appnavigations.MyHomeFragmentDirections
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,19 +17,20 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [MyHomeFragment.newInstance] factory method to
+ * Use the [AppStartFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MyHomeFragment : Fragment() {
+class AppStartFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var button:Button
-    lateinit var deeplinkButton: Button
+
+    lateinit var buttonWorkManager:Button
+    lateinit var buttonCoroutines:Button
+    lateinit var buttonAppNavigations:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -42,30 +42,26 @@ class MyHomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_home, container, false)
+        return inflater.inflate(R.layout.fragment_app_start, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        button=view.findViewById(R.id.button_start)
-        deeplinkButton=view.findViewById(R.id.deep_link)
-        button.setOnClickListener{
-            val arg1 = 2
-            val arg3 = "Screen 2"
-            val data1=1
-            val arg2= MyParcelableDataArgs(data1)
-            arg2.data2=2
-            arg2.data3="Welcome to Screen 2(wow)"
-            arg2.data4=1
-            val directions=MyHomeFragmentDirections.actionMyHomeFragmentToMySecondFragment(arg2,arg3,arg1)
-//val directions=MyHomeFragmentDirections.actionMyHomeFragmentToMySecondFragment(arg1,arg2,arg3)
-
-           findNavController().navigate(directions)
+        buttonAppNavigations=view.findViewById(R.id.app_navigations)
+        buttonWorkManager=view.findViewById(R.id.work_manager_sample)
+        buttonCoroutines=view.findViewById(R.id.coroutines_sample)
+        buttonCoroutines.setOnClickListener {
+            val directions=AppStartFragmentDirections.actionAppStartFragmentToCoroutinesActivity()
+            findNavController().navigate(directions)
+        }
+        buttonAppNavigations.setOnClickListener {
+            val directions=AppStartFragmentDirections.actionAppStartFragmentToNavigationActivity()
+            findNavController().navigate(directions)
 
         }
-        deeplinkButton.setOnClickListener{
-            val deepLink = InternalDeepLink.SECOND.toUri()
-            findNavController().navigate(deepLink)
+        buttonWorkManager.setOnClickListener {
+            val directions=AppStartFragmentDirections.actionAppStartFragmentToWorkManagerActivity()
+            findNavController().navigate(directions)
         }
     }
 

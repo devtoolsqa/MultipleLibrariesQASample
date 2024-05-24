@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigations"
+    app:startDestination="@id/appStartFragment">
+
+    <fragment android:id="@+id/appStartFragment"
+        android:name="com.example.kotlinpracticeudemy.startscreen.AppStartFragment"
+        android:label="fragment_app_start"
+        tools:layout="@layout/activity_app_start_screen">
+        <action android:id="@+id/action_appStartFragment_to_navigationActivity"
+            app:destination="@id/appnavigationActivityDestination">
+
+        </action>
+        <action android:id="@+id/action_appStartFragment_to_workManagerActivity"
+            app:destination="@id/workmanagerctivityDestination">
+
+        </action>
+        <action android:id="@+id/action_appStartFragment_to_coroutinesActivity"
+            app:destination="@id/coroutinesactivityDestination">
+
+        </action>
+
+
+    </fragment>
+
+    <activity
+        android:id="@+id/startActivityDestination"
+        android:name="com.example.kotlinpracticeudemy.startscreen.AppStartScreen"
+        android:label="start_screen" >
+
+    </activity>
+    <activity
+        android:id="@+id/workmanagerctivityDestination"
+        android:name="com.example.kotlinpracticeudemy.workmanager.WorkManagerActivity"
+        android:label="work_manager_screen" >
+
+    </activity>
+
+    <activity
+        android:id="@+id/coroutinesactivityDestination"
+        android:name="com.example.couritinespractice.CoroutinesActivity"
+        android:label="coroutine_screen" >
+
+    </activity>
+
+    <activity
+        android:id="@+id/appnavigationActivityDestination"
+        android:name="com.example.kotlinpracticeudemy.appnavigations.NavigationActivity"
+        android:label="navigation_screen" >
+
+    </activity>
+
+
+
+
+</navigation>

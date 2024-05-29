@@ -15,6 +15,9 @@
         android:theme="@style/Theme.KotlinPracticeUdemy"
         tools:targetApi="31">
         <activity
+            android:name=".mvvm.MMVMActivity"
+            android:exported="false" />
+        <activity
             android:name=".startscreen.AppStartScreen"
             android:exported="true">
             <intent-filter>
@@ -44,8 +47,9 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name="com.example.couritinespractice.CoroutinesActivity"
-            android:exported="true"/>
+        <activity
+            android:name="com.example.couritinespractice.CoroutinesActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

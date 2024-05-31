@@ -3,10 +3,10 @@ package com.example.kotlinpracticeudemy.mvvm.models
 data class Rover (
     val id:Int,
     val name:String,
-    val landingDate:String,
-    val launchDate:String,
+    val landing_date:String,
+    val launch_date:String,
     val status:String,
-    val maxSol:Int,
-    val maxDate:String,
-    val totalPhotos:Int,
-    val cameras:List<Rover>)
+    val max_sol:Int,
+    val max_date:String,
+    val total_photos:Int,
+    val cameras:List<Cameras>)

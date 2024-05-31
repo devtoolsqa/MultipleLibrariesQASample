@@ -1,5 +1,6 @@
 package com.example.kotlinpracticeudemy.mvvm.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -30,9 +31,11 @@ class PhotosAdapter : RecyclerView.Adapter<PhotosAdapter.ViewHolder>()  {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Glide.with(holder.itemView)
-            .load(photosList[position].imgSrc)
-            .into(holder.binding.movieImage)
-        holder.binding.movieName.text = photosList[position].rover.name
+
+        holder.binding.photoId.text = "Photo ID : "+photosList[position].id
+        Glide.with(holder.itemView.context)
+            .load(photosList[position].img_src)
+            .into(holder.binding.photoImage)
+        Log.d("url",photosList[position].img_src)
     }
 }

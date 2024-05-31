@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.kotlinpracticeudemy.mvvm.models.Photo
+import com.example.kotlinpracticeudemy.mvvm.models.Photos
 import com.example.kotlinpracticeudemy.mvvm.requests.PhotosRequest
 import com.example.kotlinpracticeudemy.mvvm.requests.ServiceGenerator
 import retrofit2.Call
@@ -13,11 +14,11 @@ import retrofit2.Response
 
 
 class MarsRoverPhotosListViewModel : ViewModel() {
-    private var photosData = MutableLiveData<List<Photo>>()
-    val request=PhotosRequest(sol=1000,page=2,api_key="DEMO_KEY")
+    private var photosData = MutableLiveData<Photos>()
+
     fun getPhotos() {
-        ServiceGenerator.api.getPhotos(request).enqueue(object  : Callback<List<Photo>> {
-            override fun onResponse(call: Call<List<Photo>>, response: Response<List<Photo>>) {
+        ServiceGenerator.api.getPhotos(1000,2,"RdXa2tD7aJkyIpc96tXFCysf4bZcqQtvcuQOB44h").enqueue(object  : Callback<Photos> {
+            override fun onResponse(call: Call<Photos>, response: Response<Photos>) {
                 if (response.body()!=null){
                     photosData.value = response.body()
                 }
@@ -26,14 +27,14 @@ class MarsRoverPhotosListViewModel : ViewModel() {
                 }
             }
 
-            override fun onFailure(call: Call<List<Photo>>, t: Throwable) {
+            override fun onFailure(call: Call<Photos>, t: Throwable) {
                 Log.d("TAG",t.message.toString())
             }
 
 
         })
     }
-    fun observePhotosLiveData() : LiveData<List<Photo>> {
+    fun observePhotosLiveData() : LiveData<Photos> {
         return photosData
     }
 

@@ -8,7 +8,7 @@ object ServiceGenerator {
 
     val api : AuthApi by lazy {
         Retrofit.Builder()
-            .baseUrl("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/")
+            .baseUrl("https://api.nasa.gov/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(AuthApi::class.java)

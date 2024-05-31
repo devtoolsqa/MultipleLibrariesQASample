@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <ImageView
-        android:id="@+id/movieImage"
+        android:id="@+id/photoImage"
         android:layout_width="200dp"
         android:layout_height="200dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,12 +15,12 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/movieName"
+        android:id="@+id/photoId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieImage"
+        app:layout_constraintTop_toBottomOf="@id/photoImage"
         android:textSize="30dp"
         android:text="Movie Name"
         android:textAlignment="center"

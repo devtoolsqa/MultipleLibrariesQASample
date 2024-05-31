@@ -21,6 +21,10 @@
             app:destination="@id/coroutinesactivityDestination">
 
         </action>
+        <action android:id="@+id/action_appStartFragment_to_mvvmActivity"
+            app:destination="@id/mvvmctivityDestination">
+
+        </action>
 
 
     </fragment>
@@ -35,6 +39,12 @@
         android:id="@+id/workmanagerctivityDestination"
         android:name="com.example.kotlinpracticeudemy.workmanager.WorkManagerActivity"
         android:label="work_manager_screen" >
+
+    </activity>
+    <activity
+        android:id="@+id/mvvmctivityDestination"
+        android:name="com.example.kotlinpracticeudemy.mvvm.MMVMActivity"
+        android:label="mvvm_screen" >
 
     </activity>
 

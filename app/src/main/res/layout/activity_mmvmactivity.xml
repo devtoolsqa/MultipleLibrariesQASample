@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    tools:context=".MainActivity">
+    tools:context=".mvvm.MMVMActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_movies"
+        android:id="@+id/rv_photos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,5 +17,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/photos_layout">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load Listview"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="118dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

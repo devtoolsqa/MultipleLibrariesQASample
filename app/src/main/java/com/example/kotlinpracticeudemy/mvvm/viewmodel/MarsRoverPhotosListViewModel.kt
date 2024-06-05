@@ -13,11 +13,11 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class MarsRoverPhotosListViewModel : ViewModel() {
+class MarsRoverPhotosListViewModel() : ViewModel() {
     private var photosData = MutableLiveData<Photos>()
 
-    fun getPhotos() {
-        ServiceGenerator.api.getPhotos(1000,2,"RdXa2tD7aJkyIpc96tXFCysf4bZcqQtvcuQOB44h").enqueue(object  : Callback<Photos> {
+    fun getPhotos(page:Int) {
+        ServiceGenerator.api.getPhotos(1000,page,"RdXa2tD7aJkyIpc96tXFCysf4bZcqQtvcuQOB44h").enqueue(object  : Callback<Photos> {
             override fun onResponse(call: Call<Photos>, response: Response<Photos>) {
                 if (response.body()!=null){
                     photosData.value = response.body()

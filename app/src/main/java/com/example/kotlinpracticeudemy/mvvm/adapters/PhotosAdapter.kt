@@ -11,7 +11,16 @@ import com.example.kotlinpracticeudemy.mvvm.models.Photo
 class PhotosAdapter : RecyclerView.Adapter<PhotosAdapter.ViewHolder>()  {
     private var photosList = ArrayList<Photo>()
     fun setPhotosList(movieList : List<Photo>){
-        this.photosList = movieList as ArrayList<Photo>
+        // Get the existing list of photos from the adapter
+        val existingPhotos =  photosList
+
+        // Combine the new and existing photos into a single list
+        val combinedPhotos = existingPhotos + movieList
+
+        // Update the adapter with the combined list
+        this.photosList = combinedPhotos as ArrayList<Photo>
+
+        //Notify the adapter that the data has changed
         notifyDataSetChanged()
     }
     class ViewHolder(val binding : PhotosLayoutBinding) : RecyclerView.ViewHolder(binding.root)  {}

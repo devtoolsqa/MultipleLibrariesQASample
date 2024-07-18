@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.androidx.navigation.safeargs)
+    alias(libs.plugins.kotlin.kapt)
+   // id("org.jetbrains.kotlin.kapt") version "1.9.0"
     //alias(libs.plugins.google.gms.google.services)
     //alias(libs.plugins.google.firebase.crashlytics)
 }
@@ -50,6 +52,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    viewBinding{
+        enable=true
+    }
 }
 
 dependencies {
@@ -71,5 +76,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.androidx.work.runtime.ktx)
     implementation(libs.glide)
+
+    // ViewModel and LiveData
+    implementation(libs.androidx.lifecycle.extensions)
+    kapt(libs.androidx.lifecycle.common.java8)
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler)
+    implementation(libs.rxjava)
+    implementation(libs.rxandroid)
 
 }

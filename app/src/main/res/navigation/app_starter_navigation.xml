@@ -25,6 +25,10 @@
             app:destination="@id/mvvmctivityDestination">
 
         </action>
+        <action android:id="@+id/action_appStartFragment_to_roomActivity"
+            app:destination="@id/roomctivityDestination">
+
+        </action>
 
 
     </fragment>
@@ -44,7 +48,11 @@
     <activity
         android:id="@+id/mvvmctivityDestination"
         android:name="com.example.kotlinpracticeudemy.mvvm.MMVMActivity"
-        android:label="mvvm_screen" >
+        android:label="mvvm_screen" />
+    <activity
+        android:id="@+id/roomctivityDestination"
+        android:name="com.example.kotlinpracticeudemy.roomsample.RoomActivity"
+        android:label="room_screen" >
 
     </activity>
 

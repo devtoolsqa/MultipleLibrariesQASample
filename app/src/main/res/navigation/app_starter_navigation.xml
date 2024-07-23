@@ -29,7 +29,10 @@
             app:destination="@id/roomctivityDestination">
 
         </action>
+        <action android:id="@+id/action_appStartFragment_to_proguardActivity"
+            app:destination="@id/proguardActivityDestination">
 
+        </action>
 
     </fragment>
 
@@ -67,6 +70,13 @@
         android:id="@+id/appnavigationActivityDestination"
         android:name="com.example.kotlinpracticeudemy.appnavigations.NavigationActivity"
         android:label="navigation_screen" >
+
+    </activity>
+
+    <activity
+        android:id="@+id/proguardActivityDestination"
+        android:name="com.example.kotlinpracticeudemy.proguardbug.ListActivity"
+        android:label="Proguard_screen" >
 
     </activity>
 

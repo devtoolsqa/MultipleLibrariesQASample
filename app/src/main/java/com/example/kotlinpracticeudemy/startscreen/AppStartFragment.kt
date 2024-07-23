@@ -30,6 +30,7 @@ class AppStartFragment : Fragment() {
     lateinit var buttonAppNavigations:Button
     lateinit var buttonmvvm:Button
     lateinit var buttonRoom:Button
+    lateinit var buttonProguard:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +55,8 @@ class AppStartFragment : Fragment() {
         buttonCoroutines=view.findViewById(R.id.coroutines_sample)
         buttonmvvm=view.findViewById(R.id.mvvm_sample)
         buttonRoom=view.findViewById(R.id.room_db_sample)
+        buttonProguard=view.findViewById(R.id.proguard_sample)
+
         buttonCoroutines.setOnClickListener {
             val directions=AppStartFragmentDirections.actionAppStartFragmentToCoroutinesActivity()
             findNavController().navigate(directions)
@@ -73,6 +76,10 @@ class AppStartFragment : Fragment() {
         }
         buttonRoom.setOnClickListener {
             val directions=AppStartFragmentDirections.actionAppStartFragmentToRoomActivity()
+            findNavController().navigate(directions)
+        }
+        buttonProguard.setOnClickListener{
+            val directions=AppStartFragmentDirections.actionAppStartFragmentToProguardActivity()
             findNavController().navigate(directions)
         }
     }

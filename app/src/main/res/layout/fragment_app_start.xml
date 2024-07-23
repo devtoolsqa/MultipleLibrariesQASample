@@ -36,5 +36,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Room Datbase Sample" />
+    <Button
+        android:id="@+id/proguard_sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pro-Guard bug" />
 
 </LinearLayout>

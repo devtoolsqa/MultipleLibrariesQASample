@@ -55,6 +55,10 @@ android {
     viewBinding{
         enable=true
     }
+    lint {
+        baseline = file("lint-baseline.xml")
+        abortOnError=false
+    }
 }
 
 dependencies {
@@ -84,5 +88,8 @@ dependencies {
     kapt(libs.androidx.room.compiler)
     implementation(libs.rxjava)
     implementation(libs.rxandroid)
+
+    implementation(libs.androidx.window)
+    implementation(libs.androidx.startup.runtime)
 
 }

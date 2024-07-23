@@ -10,4 +10,5 @@
           <string name="priority">Priority</string>
           <string name="save">Save</string>
           <string name="delete_all_notes">Delete all notes</string>
+    <string name="placeholder_text">Placeholder</string>
 </resources>

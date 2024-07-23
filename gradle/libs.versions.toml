@@ -14,6 +14,8 @@ constraintlayout = "2.1.4"
 roomRuntime = "2.6.1"
 rxandroid = "2.1.1"
 rxjava = "2.2.16"
+startupRuntime = "1.1.1"
+window = "1.3.0"
 workRuntimeKtx = "2.9.0"
 retrofit = "2.9.0"
 converterGson = "2.9.0"
@@ -34,6 +36,8 @@ androidx-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-commo
 androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-startup-runtime = { module = "androidx.startup:startup-runtime", version.ref = "startupRuntime" }
+androidx-window = { module = "androidx.window:window", version.ref = "window" }
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

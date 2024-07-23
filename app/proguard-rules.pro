@@ -45,3 +45,6 @@
 -dontwarn io.reactivex.**
 -keep class io.reactivex.** { *; }
 -keepclassmembers class io.reactivex.** { *; }
+
+-keep class androidx.startup.** { *; }
+ -keep class com.example.kotlinpracticeudemy.proguardbug.SplitInitializer { *; }

@@ -47,6 +47,37 @@
         <activity
             android:name=".workmanager.WorkManagerActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".proguardbug.ListActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".proguardbug.DetailActivity"
+            android:exported="false"
+            android:label="" />
+        <activity
+            android:name=".proguardbug.SummaryActivity"
+            android:exported="false"
+            android:label="" />
+        <activity
+            android:name=".proguardbug.PlaceholderActivity"
+            android:exported="false"
+            android:label="" />
+        <property
+            android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
+            android:value="true" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="remove">
+            <!-- Make SplitInitializer discoverable by InitializationProvider. -->
+            <meta-data
+                android:name="${applicationId}.SplitInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

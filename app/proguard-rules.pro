@@ -48,3 +48,6 @@
 
 -keep class androidx.startup.** { *; }
  -keep class com.example.kotlinpracticeudemy.proguardbug.SplitInitializer { *; }
+ -keepclassmembers class * {
+     public <init>();
+ }

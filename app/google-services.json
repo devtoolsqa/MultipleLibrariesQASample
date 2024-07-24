@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58350925702",
+    "project_id": "composeproj-e47e0",
+    "storage_bucket": "composeproj-e47e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58350925702:android:0fda6a4bb559aeebe45e07",
+        "android_client_info": {
+          "package_name": "com.example.kotlinpracticeudemy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58350925702-uimjlob09i9f7iju8aa4frhlvqbdlh7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBlfzv7XRvVv6TtV0QPA-QaK8NgSgtk4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58350925702-uimjlob09i9f7iju8aa4frhlvqbdlh7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

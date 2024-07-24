@@ -4,9 +4,10 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.androidx.navigation.safeargs)
     alias(libs.plugins.kotlin.kapt)
-   // id("org.jetbrains.kotlin.kapt") version "1.9.0"
-    //alias(libs.plugins.google.gms.google.services)
-    //alias(libs.plugins.google.firebase.crashlytics)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.parcelize)
+
 }
 
 
@@ -91,5 +92,30 @@ dependencies {
 
     implementation(libs.androidx.window)
     implementation(libs.androidx.startup.runtime)
+
+
+
+
+
+    //Dagger Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    //implementation(libs.androidx.hilt.lifecycle.viewmodel)
+    kapt(libs.androidx.hilt.compiler)
+
+
+
+    //Firebase
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.storage.ktx)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.kotlinx.coroutines.play.services)
+
+    //Gson
+    implementation(libs.gson)
+
+    //ImagePicker
+    implementation(libs.imagepicker)
 
 }

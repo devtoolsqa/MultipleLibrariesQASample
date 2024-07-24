@@ -33,6 +33,10 @@
             app:destination="@id/proguardActivityDestination">
 
         </action>
+        <action android:id="@+id/action_appStartFragment_to_firebaseActivity"
+            app:destination="@id/firebaseActivityDestination">
+
+        </action>
 
     </fragment>
 
@@ -77,6 +81,13 @@
         android:id="@+id/proguardActivityDestination"
         android:name="com.example.kotlinpracticeudemy.proguardbug.ListActivity"
         android:label="Proguard_screen" >
+
+    </activity>
+
+    <activity
+        android:id="@+id/firebaseActivityDestination"
+        android:name="com.example.kotlinpracticeudemy.firebasemvvm.FirebaseActivity"
+        android:label="Firebase_screen" >
 
     </activity>
 

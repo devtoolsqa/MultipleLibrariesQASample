@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     alias(libs.plugins.androidx.navigation.safeargs) apply false
     alias(libs.plugins.kotlin.kapt) apply false
-   // alias(libs.plugins.google.gms.google.services) apply false
-   // alias(libs.plugins.google.firebase.crashlytics) apply false
+    alias(libs.plugins.google.services) apply false
+    alias(libs.plugins.dagger.hilt) apply false
+    alias(libs.plugins.kotlin.parcelize) apply false
 }

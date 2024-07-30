@@ -23,6 +23,9 @@ android {
     }*/
     namespace = "com.example.kotlinpracticeudemy"
     compileSdk = 34
+    androidResources {
+        generateLocaleConfig = true
+    }
 
     defaultConfig {
         applicationId = "com.example.kotlinpracticeudemy"
@@ -62,6 +65,7 @@ android {
         baseline = file("lint-baseline.xml")
         abortOnError=false
     }
+
 }
 
 dependencies {

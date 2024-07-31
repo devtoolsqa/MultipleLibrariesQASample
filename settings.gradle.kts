@@ -24,6 +24,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KotlinPracticeUdemy"
+rootProject.name = "MultiLibraryQaSample"
 include(":app")
  

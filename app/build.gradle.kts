@@ -12,14 +12,14 @@ plugins {
 
 
 android {
-    signingConfigs {
+  /*  signingConfigs {
         create("release") {
             storeFile = file("C:\\Users\\sandeeppadala\\key-store\\api33.jks")
             storePassword = "123456"
             keyAlias = "key0"
             keyPassword = "123456"
         }
-    }
+    }*/
     namespace = "com.example.kotlinpracticeudemy"
     compileSdk = 34
 
@@ -40,7 +40,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("release")
+           // signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

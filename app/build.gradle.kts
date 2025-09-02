@@ -12,7 +12,7 @@ plugins {
 
 
 android {
-  /*  signingConfigs {
+    /*signingConfigs {
         create("release") {
             storeFile = file("C:\\Users\\sandeeppadala\\key-store\\api33.jks")
             storePassword = "123456"
@@ -40,8 +40,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-           // signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("debug")
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
